@@ -7,15 +7,9 @@ The application will create a sortedLinkedList based on the parameters you send,
 - docker-compose
 
 ## Run application
-
-### Run in the background:
 ```
 docker-compose up --build -d
-```
-
-### Run interactive mode:
-```
-docker-compose up --build
+docker-compose exec php composer install
 ```
 
 Now your application is running on localhost on port 8080.
