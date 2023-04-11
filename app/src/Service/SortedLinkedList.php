@@ -23,7 +23,7 @@ class SortedLinkedList
         $current = $this->head;
         $result = '';
         while ($current !== null) {
-            $result .= $current->getValue() . " SortedLinkedList.php";
+            $result .= $current->getValue() . " ";
             $current = $current->getNext();
         }
 
