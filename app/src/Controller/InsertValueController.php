@@ -10,14 +10,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class InsertValueController extends AbstractController
 {
-    private SortedLinkedList $sortedLinkedList;
 
-    public function __construct(SortedLinkedList $sortedLinkedList)
-    {
-        $this->sortedLinkedList = $sortedLinkedList;
-    }
+    public function __construct(private readonly SortedLinkedList $sortedLinkedList) {}
 
-    #[Route('api/insert/value', name: 'insert_value', methods: 'POST')]
+    #[Route('api/insert/value', name: 'insert_values', methods: 'POST')]
     public function insertValues(Request $request): JsonResponse
     {
         if ($request->request->has('values') === false) {
