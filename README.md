@@ -34,3 +34,11 @@ curl --location --request POST 'http://localhost:8080/api/insert/value' \
 }
 ```
 
+## Tests
+The application contains simple unit tests to test whether the basic public methods in the sortedLinkedList class work correctly
+
+### Run all tests
+```
+php bin/phpunit
+```
+
