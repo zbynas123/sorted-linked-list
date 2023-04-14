@@ -15,6 +15,11 @@ docker-compose exec php composer install
 Now your application is running on localhost on port 8080.
 ``http://localhost:8080``
 
+All commands run on top of the application in docker container, if you want to run for example tests or composer without using docker-compose..., log in to docker container with the following command
+```
+docker-compose exec php /bin/bash
+```
+
 ## Example
 Send an array of values you want to sort and link to the endpoint api/insert/value and the application will return the correct result.
 
@@ -38,6 +43,7 @@ curl --location --request POST 'http://localhost:8080/api/insert/value' \
 The application contains simple unit tests to test whether the basic public methods in the sortedLinkedList class work correctly
 
 ### Run all tests
+The next command run in docker container.
 ```
 php bin/phpunit
 ```
